@@ -28,7 +28,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding, MovieViewModel>(R.layou
     }
 
     override fun launchObservers() {
-        viewModel.movieState.spectateUiState(error = { print("ты меня не достойна, fuck you") },
+        viewModel.movieState.spectateUiState(error = { print("null") },
             success = {
                 movieAdapter.submitList(it)
             })
